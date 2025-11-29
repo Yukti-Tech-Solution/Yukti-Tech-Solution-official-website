@@ -1,8 +1,50 @@
 {
-  "name": "vite_react_shadcn_ts",
+  "name": "yukti-tech-solution-website",
+  "version": "1.0.0",
   "private": true,
-  "version": "0.0.0",
   "type": "module",
+  "description": "Official website for Yukti Tech Solution - A leading software development company specializing in modern web applications, AI-powered solutions, and custom software development.",
+  "author": {
+    "name": "Yukti Tech Solution",
+    "url": "https://yuktitechsolution.co.in/"
+  },
+  "contributors": [
+    {
+      "name": "Pranav P. Kapse",
+      "role": "Co-Founder & CEO"
+    },
+    {
+      "name": "Vedant R. Sawaleshwarkar",
+      "role": "Co-Founder & CTO"
+    },
+    {
+      "name": "Vaibhav S. Waghalkar",
+      "role": "Co-Founder & Head of Engineering"
+    },
+    {
+      "name": "Lahu K. Chavan",
+      "role": "Co-Founder & COO"
+    }
+  ],
+  "homepage": "https://yuktitechsolution.co.in/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Yukti-Tech-Solution/yuktin-crafts-web-main.git"
+  },
+  "keywords": [
+    "yukti-tech-solution",
+    "software-development",
+    "web-development",
+    "ai-solutions",
+    "react",
+    "typescript",
+    "vite",
+    "tailwindcss",
+    "shadcn-ui",
+    "portfolio",
+    "business-website"
+  ],
+  "license": "MIT",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

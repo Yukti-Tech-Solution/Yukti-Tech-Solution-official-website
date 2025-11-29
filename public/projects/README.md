@@ -2,6 +2,19 @@
 
 This directory contains images for the portfolio projects showcased on the Yukti Tech Solutions website.
 
+**Official Website:** [https://yuktitechsolution.co.in/](https://yuktitechsolution.co.in/)
+
+## About Yukti Tech Solution
+
+Yukti Tech Solution is a leading software development company specializing in modern web applications, AI-powered solutions, and custom software development.
+
+### Leadership Team
+
+- **Pranav P. Kapse** - Co-Founder & CEO
+- **Vedant R. Sawaleshwarkar** - Co-Founder & CTO
+- **Vaibhav S. Waghalkar** - Co-Founder & Head of Engineering
+- **Lahu K. Chavan** - Co-Founder & COO
+
 ## Folder Structure
 
 ```
