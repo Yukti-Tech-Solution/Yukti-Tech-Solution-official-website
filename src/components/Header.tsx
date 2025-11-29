@@ -1,23 +1,46 @@
 import { Moon, Sun } from "lucide-react";
+import { useNavigate, useLocation, Link } from "react-router-dom";
 import { useTheme } from "./ThemeProvider";
 import { Button } from "@/components/ui/button";
 
 const Header = () => {
   const { theme, setTheme } = useTheme();
+  const navigate = useNavigate();
+  const location = useLocation();
+  const isHomePage = location.pathname === '/';
 
   const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+    if (!isHomePage) {
+      navigate('/');
+      // Wait for navigation and then scroll
+      setTimeout(() => {
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 100);
+    } else {
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  };
+
+  const handleProjectsClick = () => {
+    if (isHomePage) {
+      scrollToSection("projects");
+    } else {
+      navigate("/projects");
     }
   };
 
   return (
     <header className="fixed top-0 w-full bg-background/80 backdrop-blur-md border-b border-border z-50">
       <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24 py-4 flex items-center justify-between">
-        <h1 className="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+        <Link to="/" className="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent hover:opacity-80 transition-opacity">
           Yukti Tech Solutions
-        </h1>
+        </Link>
         
         <nav className="hidden md:flex items-center gap-8">
           <button
@@ -39,8 +62,10 @@ const Header = () => {
             Services
           </button>
           <button
-            onClick={() => scrollToSection("projects")}
-            className="text-sm font-medium hover:text-primary transition-colors"
+            onClick={handleProjectsClick}
+            className={`text-sm font-medium hover:text-primary transition-colors ${
+              location.pathname === '/projects' ? 'text-primary' : ''
+            }`}
           >
             Projects
           </button>

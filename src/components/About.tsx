@@ -1,6 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import founder1 from "@/assets/founder-1.jpg";
-import founder2 from "@/assets/founder-2.jpg";
+import founder2 from "@/assets/founder-2.png";
 import founder3 from "@/assets/founder-3.jpg";
 import founder4 from "@/assets/founder-4.jpg";
 
